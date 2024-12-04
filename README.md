@@ -1,5 +1,3 @@
-Higor Abreu Freiberger - 19100863
-
 Predição da Qualidade da Água
 
 Descrição:  
