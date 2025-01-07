@@ -1,36 +1,59 @@
-Predição da Qualidade da Água
+# Water Quality Prediction
 
-Descrição:  
-O programa prevê a qualidade da água com base nos parâmetros de aparência, pH e turbidez. Ele utiliza um sistema fuzzy para gerar dados e treina um modelo de machine learning para realizar as previsões.
+This program predicts water quality based on appearance, pH, and turbidity parameters. It uses a fuzzy system to generate data and trains a machine learning model for predictions.
 
-Arquivos do Projeto:  
-1. sistema_fuzzy.py: Define o sistema fuzzy utilizado para simular a qualidade da água.  
-2. banco_de_dados.py: Gera dados de entrada e saída usando o sistema fuzzy.  
-3. treinamento_modelo.py: Treina o modelo com os dados gerados.  
-4. comparacao_saidas.py: Compara as previsões do modelo com os dados reais.  
-5. main.py: Centraliza a execução do programa.
+---
 
-Bibliotecas: numpy, scikit-learn, scikit-fuzzy, argparse.  
+## **Project Files**
 
-Para instalar as dependências, use o comando:  
+1. **`sistema_fuzzy.py`**: Defines the fuzzy system used to simulate water quality.  
+2. **`banco_de_dados.py`**: Generates input and output data using the fuzzy system.  
+3. **`treinamento_modelo.py`**: Trains the model with the generated data.  
+4. **`comparacao_saidas.py`**: Compares model predictions with actual data.  
+5. **`main.py`**: Centralizes program execution.
+
+---
+
+## **Dependencies**
+
+Install the required libraries using the command:  
+```bash
 pip install numpy scikit-learn scikit-fuzzy
+```
 
-Como Executar:  
-1. Primeira execução:  
-   python main.py  
-   Isso gera os dados, treina o modelo e compara as previsões.
+---
 
-2. Regerar dados e treinar modelo(força a geração de dados):  
-   python main.py --regenerate  
+## **How to Run**
 
-3. Apenas comparar saídas:  
-   python main.py  
+1. **First Execution**:  
+   Run the command below to generate data, train the model, and compare predictions:  
+   ```bash
+   python main.py
+   ```
 
-Saídas do Programa:  
-- Score (R²): Mede a qualidade do modelo (valores próximos de 1 indicam bom desempenho).  
-- Erro Quadrático Médio (MSE): Mede a precisão das previsões (valores menores indicam maior precisão).  
+2. **Regenerate Data and Train the Model**:  
+   Use this command to force data generation and retrain the model:  
+   ```bash
+   python main.py --regenerate
+   ```
 
-Estrutura de Arquivos Gerados:  
-- X.npy e y.npy: Dados de entrada e saída gerados.  
-- modelo_treinado.pkl: Modelo treinado.  
-- scaler.pkl: Escalador para normalizar os dados.
+3. **Compare Outputs Only**:  
+   Run this command to skip data generation and use the existing model:  
+   ```bash
+   python main.py
+   ```
+
+---
+
+## **Program Outputs**
+
+- **Score (R²)**: Evaluates model quality (values close to 1 indicate good performance).  
+- **Mean Squared Error (MSE)**: Measures prediction accuracy (lower values indicate higher precision).  
+
+---
+
+## **Generated File Structure**
+
+- **`X.npy` and `y.npy`**: Generated input and output data.  
+- **`modelo_treinado.pkl`**: Trained model file.  
+- **`scaler.pkl`**: Scaler used to normalize data.
